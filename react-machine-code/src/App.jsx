@@ -5,6 +5,7 @@ import explorer from './data/folderData'
 import Folder from './components/Folder'
 import useTraverseTree from './hooks/use-traverse-tree'
 import TicTacToe from './components/TicTacToe'
+import Popover from './components/Popover'
 
 function App() {
 const [star,setRating] = useState(0)
@@ -20,9 +21,12 @@ const { insertNode } = useTraverseTree();
   return (
     <>
     {/* Star Rating Component */}
-      {/* <StarRating rating={star} setRating={setRating}/>
-      <Folder handleInsertNode={handleInsertNode} explorer={explorerData}/> */}
+      <StarRating rating={star} setRating={setRating}/>
+      <Folder handleInsertNode={handleInsertNode} explorer={explorerData}/>
       <TicTacToe/>
+      <Popover content="This is the popover content">
+        <button>Click me</button>
+      </Popover>
     </>
   )
 }

@@ -84,3 +84,32 @@
     background-color: #8b8686;
   }
 
+  /* Popover CSS */
+
+.popover-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.popover-content {
+  position: absolute;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.popover-pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff; /* Adjust color as needed */
+  top: -10px; /* Adjust based on pointer size and spacing */
+  left: 50%; /* Adjust based on pointer position */
+  transform: translateX(-50%);
+}
+
